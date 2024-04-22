@@ -1,0 +1,139 @@
+.dateContainer {
+  display: flex;
+  align-items: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 3;
+  width: 100%;
+  background: #1f2026;
+  color: #b1bad3;
+  font-size: 0.75rem;
+}
+
+.dateContainer p {
+  padding: 0.5rem;
+}
+
+.infoContainer {
+  background-color: #18181d;
+  padding: 0.5rem 1rem;
+}
+
+.timeContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time {
+  white-space: nowrap;
+  background: inherit;
+  padding-right: 7.25rem;
+}
+
+.time p {
+  color: #acb6ce;
+  font-size: 0.75rem;
+}
+
+.line1,
+.line2 {
+  grid-area: line / line / line / line;
+  height: 2px;
+  background: #1f2026;
+  margin: auto auto;
+}
+
+.line1 {
+  width: 80%;
+}
+
+.line2 {
+  width: 30%;
+}
+
+.status {
+  width: 30%;
+  position: relative;
+  padding: 0 0.5rem;
+  align-items: center;
+  background: #1f2026;
+  text-align: center;
+  color: #acb6ce;
+  font-size: 0.75rem;
+}
+
+.dataListContainer {
+  display: grid;
+  grid-template-columns: .65fr 2fr;;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.teamsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.teamsContainer div {
+  color: #fff;
+  font-size: 0.875rem;
+}
+
+.cardsContainer {
+  display: grid;
+  align-self: stretch;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 0.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #130f18;
+  border-radius: 0.25rem;
+  transition: background 0.1s;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  font-size: 0.875rem;
+  color: #fff;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: #6047a49b;
+}
+
+.points {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+}
+
+/* Handling mobile css */
+@media (max-width: 768px) {
+  .dataListContainer {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .teamsContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .team2::before {
+    content: "- ";
+    color: #9ca6bd;
+    width: 2px;
+    height: 2px;
+  }
+}

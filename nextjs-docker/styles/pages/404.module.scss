@@ -1,0 +1,31 @@
+.container {
+  height: auto;
+  width: 100%;
+}
+
+.home {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 6.25rem);
+
+  h1 {
+    font-size: 70px;
+    font-weight: 600;
+    color: white;
+  }
+
+  span {
+    margin-top: 2rem;
+    color: #313137;
+    font-size: 36px;
+    font-weight: 500;
+
+    a,
+    a:visited {
+      color: #108ee9;
+    }
+  }
+}

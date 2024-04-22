@@ -1,0 +1,83 @@
+.dulledBackground {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(20, 19, 22, 0.7);
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .promoContainer {
+    width: 46vw;
+    height: auto;
+    background: #1f2027;
+    padding: 1.5rem;
+    border-radius: 10px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
+
+    h1 {
+      font-weight: 500;
+      font-size: 64px;
+      color: #cfcfcf;
+      @media screen and (max-width: 768px) {
+        font-size: 45px;
+      }
+    }
+
+    p {
+      margin: 1rem 0;
+      font-weight: 500;
+      font-size: 24px;
+      text-align: center;
+      color: #848386;
+      @media screen and (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+
+    > div {
+      margin: auto;
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        input {
+          background: #18181d;
+          border: none;
+          border-radius: 20px;
+          font-weight: 500;
+          font-size: 20px;
+          color: #a3a3a3;
+          padding: 1.5rem 1.25rem;
+          outline: none;
+        }
+
+        button {
+          background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+          border-radius: 20px;
+          padding: 1.5rem 5.9375rem;
+          font-weight: 500;
+          font-size: 20px;
+          color: #141316;
+          @media screen and (max-width: 768px) {
+            padding: 1.2rem 5.9375rem;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

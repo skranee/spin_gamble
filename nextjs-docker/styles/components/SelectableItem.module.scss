@@ -1,0 +1,94 @@
+.itemContainer {
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 9.875rem;
+  height: 13rem;
+  padding: 1.5rem;
+  box-sizing: content-box;
+  opacity: 1;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .imageContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .actualItemContainer {
+    z-index: 1;
+    width: 158px;
+    height: 158px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-weight: 500;
+      font-size: 12px;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .rarityContainer {
+    position: absolute;
+    z-index: 0;
+    width: 158px;
+    height: 158px;
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+
+  .itemText {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .textContainer {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .valueContainer {
+      display: flex;
+      align-items: center;
+
+      .balanceContainer {
+        width: 13px;
+        height: 14px;
+      }
+
+      .value {
+        margin-left: 0.125rem;
+        font-weight: 500;
+        font-size: 16px;
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.active {
+  opacity: 0.3;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

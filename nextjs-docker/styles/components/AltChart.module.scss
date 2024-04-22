@@ -1,0 +1,59 @@
+.chartContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      color: #ffffff;
+      font-weight: 400;
+      font-size: 76px;
+      text-align: center;
+    }
+  }
+
+  .rocketShip {
+    width: 205px;
+    height: 205px;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+
+  .animate {
+    animation: turn 16s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes turn {
+  0% {
+    rotate: 90deg;
+  }
+  100% {
+    rotate: 33deg;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .chartContainer {
+    .textContainer {
+      position: unset;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .chartContainer {
+    .textContainer {
+      span {
+        font-size: 80px;
+      }
+    }
+  }
+}

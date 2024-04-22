@@ -1,0 +1,50 @@
+.table {
+  width: 95%;
+  height: 100%;
+  margin: auto;
+  background-color: #1f2027;
+  //   border: 1px solid #1e2d34;
+  cursor: pointer;
+  border-collapse: collapse;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  th {
+    border-bottom: 1.7px solid #759e8c;
+    padding: 15px;
+    text-align: start;
+  }
+  td {
+    padding: 15px;
+    height: 10px;
+  }
+  .active {
+    border-bottom-color: #2a694f;
+  }
+  .marquee {
+    box-sizing: border-box;
+  }
+
+  @keyframes marquee {
+    0% {
+      top: 1em;
+    }
+    50% {
+      top: 15em;
+    }
+    100% {
+      top: 30em;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .hideForMobile {
+    display: none;
+  }
+}

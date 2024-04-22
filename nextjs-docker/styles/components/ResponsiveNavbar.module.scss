@@ -1,0 +1,128 @@
+.navbar {
+  z-index: 5;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 91px;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  border-right: 1px solid #1f2027;
+
+  .activeBG {
+    width: 4.25rem;
+    height: 4.25rem;
+    background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+    border-radius: 22px;
+    padding: 0.75rem;
+    position: absolute;
+    z-index: 0;
+    transition: 0.3s;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+    background: #1f2027;
+    list-style: none;
+    gap: 12px;
+    .active {
+      a {
+        color: #141316;
+        stroke: #141316;
+        fill: #141316;
+      }
+    }
+    .menuBtns {
+      color: #848386;
+      font-size: 16px;
+      .hamburger {
+        width: 35px;
+        background-color: #848386;
+        display: block;
+        height: 2px;
+        margin-bottom: 6px;
+        margin-left: 3px;
+        &:first-child {
+          margin-top: 15px;
+        }
+      }
+    }
+    li {
+      width: 4.25rem;
+      height: 4.25rem;
+      margin-bottom: 4.0625rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        padding: 0.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #848386;
+        stroke: #848386;
+        fill: #848386;
+
+        span {
+          margin-top: 0.5rem;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+.menu {
+  width: 100%;
+  background: #1f2027;
+  height: 100vh;
+  position: fixed;
+  top: 70px;
+  bottom: 0px;
+  z-index: 6;
+  animation: menuAnimate 1s linear;
+  -webkit-animation: menuAnimate 0.4s linear;
+  animation-direction: alternate;
+  @keyframes menuAnimate {
+    0% {
+      top: 100%;
+    }
+    50% {
+      top: 50%;
+    }
+    100% {
+      top: 8%;
+    }
+  }
+  ul {
+    list-style: none;
+    margin-left: 20px;
+    span {
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      left: 95%;
+      top: 5px;
+    }
+    li {
+      font-size: 20px;
+      color: #848386;
+      margin-bottom: 18px;
+      img {
+        margin-right: 7px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 952px) {
+  .navbar {
+    display: none;
+  }
+}

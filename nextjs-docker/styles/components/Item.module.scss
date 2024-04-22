@@ -1,0 +1,54 @@
+.Toastify {
+  display: none;
+}
+.itemContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5.875rem;
+  height: 5.875rem;
+  margin-right: 0.75rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .actualItemContainer {
+    position: absolute;
+    z-index: 1;
+    width: 94px;
+    height: 94px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-weight: 500;
+      font-size: 12px;
+      color: white;
+      text-align: center;
+    }
+  }
+
+  .rarityContainer {
+    position: absolute;
+    z-index: 0;
+    width: 94px;
+    height: 94px;
+    animation-name: spin;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

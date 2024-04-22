@@ -1,0 +1,150 @@
+.livechat {
+  //width: 50%;
+  background: #1f2027;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin: 1rem;
+  border-radius: 1rem;
+  max-height: 100%;
+  max-width: 350px;
+  min-height: 100%;
+  min-width: 350px;
+  position: relative;
+
+  .onlineContainer {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 4.375rem;
+    padding: 1.525rem 1.25rem;
+    border-bottom: 1px solid #141316;
+
+    .onlineChat {
+      font-weight: 500;
+      font-size: 20px;
+      color: #fff;
+    }
+
+    .iconContainer {
+      -webkit-animation: Chat_pulse 2s infinite;
+      animation: Chat_pulse 2s infinite;
+      background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 #deafbd;
+      height: 10px;
+      margin-bottom: auto;
+      margin-top: auto;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      width: 12px;
+    }
+
+    .numberOnline {
+      margin-left: 0.5rem;
+      font-weight: 400;
+      font-size: 16px;
+      color: #fff;
+    }
+
+    .onlineUsersContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .chatContainer {
+    height: calc(100vh - 100px - 4.375rem - 6.25rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .inputContainer {
+    height: 6.25rem;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+
+    .form {
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background: #141316;
+      border-radius: 12px;
+      margin-bottom: 4px;
+
+      .chatInput {
+        background: #141316;
+        border-radius: 10px;
+        padding: 1.25rem;
+        color: #848386;
+        border: none;
+        font-size: 15px;
+        outline: none;
+        width: 90%;
+      }
+
+      .submit {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        padding-right: 3rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .cancelChatBox {
+    display: none;
+  }
+}
+@media screen and (max-width: 952px) {
+  .livechat {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    // right: 1px;
+    max-width: 100%;
+    min-width: 100%;
+    position: fixed;
+    z-index: 6;
+    .inputContainer {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+    }
+    .cancelChatBox {
+      display: block;
+      position: absolute;
+      font-size: 30px;
+      color: white;
+      right: 16px;
+      top: 15px;
+    }
+  }
+}
+
+@keyframes Chat_pulse {
+  0% {
+    box-shadow: 0 0 0 0 #8a57de;
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgb(51 217 178 / 0%);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(51 217 178 / 0%);
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+}

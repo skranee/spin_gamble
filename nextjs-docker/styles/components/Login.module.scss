@@ -1,0 +1,205 @@
+.dulledBackground {
+  z-index: 8;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 19, 22, 0.7);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .loginContainer {
+    width: 50vw;
+    height: 64vh;
+    background: #18181d;
+    border-radius: 10px;
+    z-index: 4;
+    display: flex;
+    position: relative;
+    .cancelBtn {
+      display: none;
+    }
+
+    .backgroundContainer {
+      aspect-ratio: 609 / 691;
+      height: 100%;
+      object-fit: fill;
+      position: absolute;
+      opacity: 0.5;
+      z-index: -1;
+    }
+
+    .logoContainer {
+      width: 265px;
+      height: 45px;
+      position: absolute;
+      top: 1rem;
+      left: 2.5625rem;
+    }
+
+    .disclaimer {
+      width: 23vw;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 18px;
+      color: #a3a3a3;
+      position: absolute;
+      bottom: 1.25rem;
+      left: 1.25rem;
+    }
+
+    .loginMethodContainer {
+      margin-top: 8vh;
+      margin-left: auto;
+      margin-right: 4vw;
+      display: flex;
+      flex-direction: column;
+      width: 25vw;
+
+      .loginSelector {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .loginText {
+          font-weight: 800;
+          font-size: 40px;
+          color: #434552;
+        }
+
+        .loginMethodSwitcher {
+          display: flex;
+          flex-direction: column;
+          align-items: baseline;
+
+          button {
+            margin-top: 1rem;
+            background: none;
+            font-weight: 700;
+            font-size: 20px;
+            color: #434552;
+            text-align: right;
+            text-transform: uppercase;
+          }
+
+          .active {
+            text-decoration-line: underline;
+            color: #c595c6;
+          }
+        }
+      }
+
+      .form {
+        height: 40vh;
+        margin-top: 2.625rem;
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin-top: 1.5rem;
+          font-weight: 500;
+          font-size: 20px;
+          color: #ffffff;
+
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+
+        input {
+          margin-top: 0.6rem;
+          background: rgba(31, 32, 39, 0.9);
+          border: 3px solid #313137;
+          border-radius: 10px;
+          font-weight: 500;
+          font-size: 20px;
+          color: #a3a3a3;
+          padding: 1.25rem;
+        }
+
+        button {
+          background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+          border-radius: 10px;
+          font-weight: 500;
+          font-size: 20px;
+          color: #141316;
+          width: 55%;
+          padding: 1.375rem 0;
+          align-self: center;
+          margin-top: 25px;
+
+          &:disabled {
+            background: linear-gradient(90deg, #3e3c40 0%, #444142 100%);
+          }
+        }
+
+        .frameContainer {
+          position: absolute;
+          left: 40px;
+          top: 65px;
+          width: 302px;
+          height: 252px;
+          border-radius: 10px;
+        }
+        @media screen and (max-width: 768px) {
+          .frameContainer {
+            position: absolute;
+            right: 0;
+            top: 10rem;
+            left: 0;
+            bottom: 0;
+            width: 302px;
+            height: 252px;
+            border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dulledBackground {
+    .loginContainer {
+      width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .dulledBackground {
+    .loginContainer {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .dulledBackground {
+    .loginContainer {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      .cancelBtn {
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: white;
+        left: 95%;
+        top: 5px;
+        z-index: 100;
+      }
+      .disclaimer {
+        width: 30vw;
+      }
+      .loginMethodContainer {
+        width: 50vw;
+        .form {
+          button {
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.page {
+  width: 100%;
+  min-height: calc(100vh - 6.25rem);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 6vh;
+
+  .top {
+    margin-top: 5.5vh;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    background: #1f2027;
+    height: 5rem;
+    padding: 0.75rem 1.25rem;
+
+    .allStatsContainer {
+      display: flex;
+
+      .statContainer {
+        padding: 0 1.25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &:first-child {
+          padding-left: 0;
+        }
+
+        .title {
+          color: #cfcfcf;
+          font-weight: 500;
+          font-size: 16px;
+        }
+
+        .stat {
+          display: flex;
+          align-items: center;
+
+          .imageContainer {
+            width: 17px;
+            height: 18px;
+            margin-right: 0.25rem;
+          }
+
+          .number {
+            font-weight: 500;
+            font-size: 20px;
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .vertLine {
+      width: 1px;
+      height: 100%;
+      background: #cfcfcf;
+      border-radius: 10px;
+
+      &:last-child {
+        width: 0px;
+      }
+    }
+
+    .rightElements {
+      display: flex;
+      align-items: center;
+
+      button {
+        background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+        border-radius: 35px;
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0.75rem 2rem;
+        color: #141316;
+        margin-right: 1.25rem;
+      }
+
+      .history {
+        font-weight: 500;
+        font-size: 16px;
+        color: #cfcfcf;
+      }
+    }
+  }
+
+  .gameContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 4vh;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .page {
+    .top {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      height: auto;
+    }
+  }
+}

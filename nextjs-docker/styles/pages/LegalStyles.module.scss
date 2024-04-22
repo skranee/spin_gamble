@@ -1,0 +1,89 @@
+.container {
+  height: auto;
+  width: 100%;
+
+  .legalContainer {
+    width: 100%;
+    min-height: calc(100vh - 6.25rem);
+    height: auto;
+
+    .head {
+      margin-top: 0;
+      font-weight: 400;
+      font-size: 36px;
+      color: #ffffff;
+    }
+
+    > div,
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      color: #848386;
+    }
+
+    p {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+
+      a,
+      a:visited {
+        color: #108ee9;
+      }
+    }
+
+    ol,
+    ul {
+      font-weight: 600;
+      font-size: 16px;
+      color: #848386;
+      margin-bottom: 1.25rem;
+
+      li {
+        margin-top: 0.5rem;
+
+        a,
+        a:visited {
+          color: #108ee9;
+        }
+      }
+    }
+
+    table,
+    tr,
+    th,
+    td {
+      border: 1px solid #848386;
+      font-weight: 300;
+      font-size: 18px;
+      color: #848386;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    span {
+      margin-top: 1.25rem;
+      font-weight: 700;
+      font-size: 16px;
+      color: #fff;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .head {
+    padding-left: 2rem;
+  }
+
+  .container .legalContainer > div {
+    table,
+    th,
+    td,
+    tr {
+      display: block;
+    }
+  }
+}

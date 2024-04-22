@@ -1,0 +1,415 @@
+.container {
+  height: auto;
+  width: 100%;
+}
+
+.leaderboard {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 6.25rem);
+  font-size: 35px;
+  padding: 2rem;
+
+  .topBar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .buttonContainer {
+      width: fit-content;
+      display: flex;
+      position: relative;
+      margin: auto;
+      margin-bottom: 30px;
+      gap: 4rem;
+
+      button {
+        background: none;
+        border: none;
+        font-weight: 500;
+        font-size: 16px;
+        color: #cfcfcf;
+        width: 72px;
+        // margin-left: 6rem;
+        text-align: center;
+        padding: 0.25rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+
+      .activeBar {
+        background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+        width: 72px;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        transition: 0.5s;
+      }
+    }
+
+    .info {
+      margin: auto;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
+      color: #cfcfcf;
+      width: auto;
+    }
+
+    .conversion {
+      font-weight: 500;
+      font-size: 14px;
+      color: #cfcfcf;
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+
+  .topThreeContainer {
+    margin-top: 3rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+    .secondPlaceContainer,
+    .thirdPlaceContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 16rem;
+      position: relative;
+      padding: 1.25rem;
+
+      > * {
+        z-index: 1;
+      }
+
+      .place {
+        margin-top: 1rem;
+        font-weight: 800;
+        font-size: 32px;
+        color: #ffffff;
+      }
+
+      .name {
+        margin-top: 0.25rem;
+        font-weight: 500;
+        font-size: 20px;
+        color: #ffffff;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+
+      .points {
+        margin-top: 0.75rem;
+        font-weight: 500;
+        font-size: 24px;
+        background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .robuxContainer {
+        margin-top: 0.75rem;
+        display: flex;
+        align-items: center;
+
+        .imageContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 21px;
+          height: 22px;
+        }
+
+        .robux {
+          margin-left: 0.25rem;
+          font-weight: 500;
+          font-size: 24px;
+          color: #ffffff;
+        }
+      }
+
+      .background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #1f2027;
+        border-radius: 10px 0 0 10px;
+        height: 50%;
+        width: 100%;
+        z-index: 0;
+      }
+
+      &:last-child .background {
+        border-radius: 0 10px 10px 0;
+      }
+    }
+
+    .firstPlaceContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 24rem;
+      position: relative;
+      padding: 1.75rem;
+
+      > * {
+        z-index: 1;
+      }
+
+      .place {
+        margin-top: 1rem;
+        font-weight: 800;
+        font-size: 40px;
+        color: #ffffff;
+      }
+
+      .name {
+        margin-top: 0.625rem;
+        font-weight: 500;
+        font-size: 24px;
+        color: #ffffff;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+
+      .points {
+        margin-top: 1rem;
+        font-weight: 500;
+        font-size: 36px;
+        background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .robuxContainer {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+
+        .imageContainer {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 31px;
+          height: 33px;
+        }
+
+        .robux {
+          margin-left: 0.75rem;
+          font-weight: 500;
+          font-size: 37px;
+          color: #ffffff;
+        }
+      }
+
+      .background {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #1a1a20;
+        border-radius: 10px 10px 0px 0px;
+        height: 56%;
+        width: 100%;
+        z-index: 0;
+      }
+    }
+  }
+
+  .timerRow {
+    margin-top: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .endsIn {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 16px;
+      color: #434552;
+      text-align: center;
+
+      .timeLeft {
+        font-weight: 500;
+        font-size: 20px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  .header {
+    margin-top: 0.75rem;
+    padding: 0 2rem;
+    display: flex;
+    gap: 2rem;
+
+    .col {
+      font-weight: 500;
+      font-size: 20px;
+      color: #434552;
+    }
+
+    .col1 {
+      @extend .col;
+      width: 20%;
+    }
+
+    .col2 {
+      @extend .col;
+      width: 42%;
+    }
+
+    .col3 {
+      @extend .col;
+      width: 28%;
+      text-align: center;
+    }
+
+    .col4 {
+      @extend .col;
+      width: 10%;
+      text-align: end;
+    }
+  }
+
+  .row {
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    background: #1f2027;
+    border-radius: 10px;
+    margin-bottom: 1.25rem;
+    margin-top: 0.25rem;
+
+    :last-child {
+      margin-bottom: 0;
+    }
+
+    .col {
+      font-weight: 500;
+      font-size: 24px;
+      color: #ffffff;
+    }
+
+    .col1 {
+      @extend .col;
+      width: 20%;
+    }
+
+    .col2 {
+      @extend .col;
+      width: 42%;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 0.75rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 100%;
+      }
+    }
+
+    .col3 {
+      @extend .col;
+      width: 28%;
+      text-align: center;
+      background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .col4 {
+      @extend .col;
+      width: 10%;
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+
+      .imageContainer {
+        width: 21px;
+        height: 22px;
+      }
+
+      span {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .leaderboard {
+    .topThreeContainer {
+      flex-wrap: wrap;
+    }
+    .firstPlaceContainer {
+      top: -325px;
+    }
+    .secondPlaceContainer {
+      top: 380px;
+    }
+    .thirdPlaceContainer {
+      top: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .leaderboard {
+    .firstPlaceContainer {
+      top: -40px;
+      left: -120px;
+    }
+    .secondPlaceContainer {
+      top: 290px;
+      left: 30px;
+    }
+    .thirdPlaceContainer {
+      left: 150px;
+      top: -20px;
+    }
+
+    .buttonContainer {
+      width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 703px) {
+  .leaderboard {
+    .topThreeContainer {
+      flex-wrap: wrap;
+    }
+    .firstPlaceContainer {
+      top: -325px;
+      left: 0;
+    }
+    .secondPlaceContainer {
+      top: 380px;
+      left: 0;
+    }
+    .thirdPlaceContainer {
+      top: 5px;
+      left: 0;
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .hiddenCol {
+    display: none;
+  }
+}

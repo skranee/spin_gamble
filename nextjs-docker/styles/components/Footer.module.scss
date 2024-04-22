@@ -1,0 +1,117 @@
+.footerContainer {
+  border-top: 1px solid #1f2027;
+  // width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 3vh;
+  padding-bottom: 6vh;
+  margin-top: 80px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logoContainer {
+    width: 210px;
+
+    .logoImage {
+      position: relative;
+      width: 170px;
+      height: 60px;
+    }
+
+    .legalDisclaimer {
+      width: 220px;
+      margin-top: 0.5rem;
+      font-weight: 600;
+      font-size: 12px;
+      color: #848386;
+    }
+  }
+
+  .header {
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+  }
+
+  ul {
+    list-style-type: none;
+
+    li {
+      font-weight: 600;
+      font-size: 20px;
+      color: #848386;
+      margin-right: 7.5vw;
+
+      &:first-child {
+        margin-top: 0.6rem;
+      }
+
+      &:last-child {
+        margin-right: none;
+      }
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  .footerContainer {
+    margin-left: 110px;
+  }
+}
+@media screen and (max-width: 1395px) {
+  .footerContainer {
+    row-gap: 35px;
+    // width: fit-content;
+    .logoContainer,
+    .legalContainer,
+    .supportContainer,
+    .socialsContainer {
+      flex: 50%;
+    }
+  }
+}
+@media screen and (max-width: 952px) {
+  .footerContainer {
+    margin-bottom: 75px;
+    row-gap: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .footerContainer {
+    flex-direction: column;
+    // margin-left:25%;
+    align-items: center;
+    text-align: center;
+    .legalContainer,
+    .supportContainer,
+    .socialsContainer {
+      margin-left: 40px;
+    }
+    .legalContainer {
+      .header {
+        margin-left: -50px;
+      }
+    }
+    .header {
+      margin-left: -40px;
+    }
+
+    .logoContainer {
+      width: 210px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media only screen and (min-width: 1396px) and (max-width: 1555px) {
+  .socialsContainer {
+    margin-top: 1rem;
+    margin-left: 35px;
+  }
+}

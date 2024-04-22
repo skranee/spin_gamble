@@ -1,0 +1,124 @@
+.container {
+  height: auto;
+  width: 100%;
+}
+
+.profile {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 6.25rem);
+  font-size: 35px;
+  padding: 6.5vh 8vw;
+
+  .userInfo {
+    align-self: center;
+
+    h1 {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 40px;
+      color: #cfcfcf;
+      margin-top: 0.25rem;
+    }
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #cfcfcf;
+    margin-top: 1.25rem;
+  }
+
+  .statsContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h3 {
+    margin-top: 1.25rem;
+    font-weight: 400;
+    font-size: 32px;
+    color: #cfcfcf;
+  }
+
+  .transactionContainer {
+    display: flex;
+    flex-direction: column;
+
+    .headers {
+      padding: 0 3rem;
+      margin-top: 1.25rem;
+      width: 100%;
+      display: flex;
+
+      span {
+        width: 33%;
+        font-weight: 400;
+        font-size: 24px;
+        color: #cfcfcf;
+      }
+
+      .gamemode {
+        text-align: center;
+      }
+
+      .amount {
+        text-align: end;
+      }
+    }
+
+    .table {
+      margin-top: 0.25rem;
+      padding: 0 3rem;
+      background: #1f2027;
+      border-radius: 20px;
+      max-height: 416px;
+
+      .noData {
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .transaction {
+        font-weight: 400;
+        font-size: 24px;
+        color: #cfcfcf;
+        display: flex;
+        align-items: center;
+        margin-top: 1.25rem;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        div {
+          width: 33%;
+        }
+
+        .gamemode {
+          text-align: center;
+        }
+
+        .value {
+          text-align: end;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          .creditContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 19px;
+            margin-right: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+}

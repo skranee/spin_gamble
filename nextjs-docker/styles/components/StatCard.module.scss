@@ -1,0 +1,43 @@
+.statCard {
+  padding: 1.25rem 0 2rem 0;
+  background: #1f2027;
+  border-radius: 20px;
+  // flex: 1;
+  // margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  .title {
+    font-weight: 400;
+    font-size: 32px;
+    color: #ffffff;
+  }
+
+  .valueContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .creditContainer {
+      width: 35px;
+      height: 38px;
+      margin-right: 0.5rem;
+    }
+
+    .statValue {
+      font-weight: 600;
+      font-size: 40px;
+      background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+}

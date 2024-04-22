@@ -1,0 +1,13 @@
+.container {
+  height: auto;
+  width: 100%;
+}
+
+.home {
+  height: auto;
+  display: flex;
+  min-height: calc(100vh - 6.25rem);
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+}

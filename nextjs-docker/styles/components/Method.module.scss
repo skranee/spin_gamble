@@ -1,0 +1,32 @@
+.methodContainer {
+  height: 12.5rem;
+  width: 12.5rem;
+  background: #1f2027;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  .imageBG {
+    background: #141316;
+    border-radius: 10px;
+    width: 11.25rem;
+    height: 8.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.625rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .name {
+    font-weight: 400;
+    font-size: 20px;
+    color: #ffffff;
+  }
+}

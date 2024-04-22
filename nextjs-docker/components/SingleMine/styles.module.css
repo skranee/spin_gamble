@@ -1,0 +1,35 @@
+.singleMineContainer {
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  border-radius: 0.5rem;
+  transition-duration: 300ms;
+  transition-property: transform, background, box-shadow;
+  background: #1f2027;
+  box-shadow: 0 0.3em #342a45;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: calc(100vw - 99vw);
+}
+
+.singleMineContainerActive,
+.singleMineContainer:hover:not(.selected) {
+  background-color: #0f202e;
+  box-shadow: 0 0.3em #342a45c6;
+  border-radius: 0.5rem;
+  transform: translateY(-0.15em);
+}
+
+.dimMine {
+  opacity: 0.5;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}

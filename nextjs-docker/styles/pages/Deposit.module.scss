@@ -1,0 +1,33 @@
+.container {
+  height: auto;
+  width: 100%;
+}
+
+.notAuthorized {
+  color: #fff;
+  font-size: 48px;
+  margin: auto;
+}
+
+.deposit,
+.withdraw {
+  height: auto;
+  display: flex;
+  min-height: calc(100vh - 6.25rem);
+  flex-direction: column;
+  font-size: 35px;
+  padding: 3rem;
+
+  .title {
+    font-weight: 400;
+    font-size: 36px;
+    color: #ffffff;
+  }
+
+  .depositMethods,
+  .withdrawMethods {
+    margin-top: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

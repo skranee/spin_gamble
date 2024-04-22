@@ -1,0 +1,67 @@
+.dulledBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 19, 22, 0.7);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .depositContainer {
+    width: 46vw;
+    height: 42vh;
+    background: #1f2027;
+    padding: 1.5rem;
+    border-radius: 10px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    h1 {
+      font-weight: 500;
+      font-size: 64px;
+      color: #cfcfcf;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-weight: 500;
+      font-size: 24px;
+      text-align: center;
+      color: #848386;
+      width: 70%;
+    }
+
+    > div {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+
+      form {
+        input {
+          background: #18181d;
+          border: none;
+          border-radius: 20px;
+          font-weight: 500;
+          font-size: 20px;
+          color: #a3a3a3;
+          padding: 1.25rem;
+        }
+
+        button {
+          margin-left: 0.75rem;
+          background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+          border-radius: 20px;
+          padding: 1.5rem 5.9375rem;
+          font-weight: 500;
+          font-size: 20px;
+          color: #141316;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,243 @@
+.container {
+  height: auto;
+  width: 100%;
+}
+
+.crashContainer {
+  margin-top: 3.125rem;
+  height: auto;
+
+  .grid {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 23.125rem calc(100% - 23.125rem - 2rem);
+    grid-template-columns: 21% 79%;
+    grid-template-areas: 'bet chart' 'live chart';
+    column-gap: 1rem;
+    row-gap: 2rem;
+  }
+
+  .bettingControlsContainer {
+    width: 100%;
+    height: 100%;
+    grid-area: bet;
+
+    .toggleContainer {
+      display: flex;
+      position: relative;
+
+      button {
+        background: none;
+        width: 50%;
+        font-weight: 500;
+        font-size: 16px;
+        color: #cfcfcf;
+        padding: 1rem 0;
+      }
+
+      .bottomBorder {
+        height: 2px;
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        transition: 0.5s;
+        background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+      }
+    }
+
+    .soon {
+      font-weight: 500;
+      font-size: 24px;
+      color: #cfcfcf;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .formContainer {
+      form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-weight: 500;
+          font-size: 14px;
+          color: #cfcfcf;
+          margin-bottom: 0.6rem;
+          margin-top: 2.25rem;
+        }
+
+        .placeBet {
+          margin-top: 2.3125rem;
+          background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+          border-radius: 55px;
+          width: 100%;
+          padding: 1rem 0;
+        }
+
+        .betControls {
+          position: relative;
+
+          button {
+            position: absolute;
+            right: 0;
+          }
+        }
+
+        > div {
+          display: flex;
+
+          input {
+            font-weight: 500;
+            font-size: 14px;
+            color: #cfcfcf;
+            background-color: #1f2027;
+            border-radius: 10px;
+            border: none;
+            padding: 0.75rem 0.75rem 0.75rem 2.75rem;
+            width: 100%;
+            background-image: url('/balance.svg');
+            background-repeat: no-repeat;
+            background-size: 22px 24px;
+            background-position: 1rem 50%;
+            height: 3.125rem;
+            position: relative;
+          }
+
+          button {
+            background: #1f2027;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: #cfcfcf;
+            padding: 1rem;
+            width: 3.125rem;
+            height: 3.125rem;
+          }
+
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          /* Firefox */
+          input[type='number'] {
+            -moz-appearance: textfield;
+          }
+        }
+      }
+    }
+  }
+
+  .liveBetsContainer {
+    width: 100%;
+    max-height: 20rem;
+    grid-area: live;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .overviewContainer {
+      display: flex;
+      justify-content: space-between;
+
+      .betAmount {
+        font-weight: 500;
+        font-size: 14px;
+        color: #ffffff;
+      }
+
+      .betTotalContainer {
+        display: flex;
+        justify-content: center;
+        padding-top: 0.5rem;
+
+        .balanceContainer {
+          width: 13px;
+          height: 14px;
+        }
+
+        .betTotal {
+          margin-left: 0.25rem;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 18px;
+          color: #848386;
+        }
+      }
+    }
+
+    .betItem {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+
+      .name {
+        margin-left: 0.6rem;
+        font-weight: 500;
+        font-size: 16px;
+        color: #848386;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 35%;
+      }
+
+      .betMultiplier {
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+      }
+
+      .textGradient {
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-image: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+      }
+
+      .normalText {
+        color: #848386;
+      }
+
+      .betAmountContainer {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+
+        .betIconContainer {
+          width: 15px;
+          height: 16px;
+        }
+
+        .betAmount {
+          margin-left: 0.25rem;
+          font-weight: 500;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .chartContainer {
+    max-height: 45rem;
+    width: 100%;
+    height: 100%;
+    grid-area: chart;
+    background-image: url('/Crash-Icons/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: local;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    Canvas {
+      width: 100% I !important;
+    }
+  }
+}

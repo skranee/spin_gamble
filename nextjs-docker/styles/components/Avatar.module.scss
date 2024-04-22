@@ -1,0 +1,27 @@
+.avatar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .border {
+    background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+    z-index: 1;
+  }
+
+  .avatarContainer {
+    position: absolute;
+    z-index: 2;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .headtail {
+    position: absolute;
+    left: -13px;
+    top: 0;
+    z-index: 3;
+    width: 30px;
+    height: 30px;
+  }
+}

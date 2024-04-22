@@ -1,0 +1,80 @@
+.navbar {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  font-size: 35px;
+  grid-area: nav;
+  border-right: 1px solid #1f2027;
+  padding: 3rem;
+  border-radius: 20px;
+  background-color: #1f2027;
+
+  .activeBG {
+    width: 4.25rem;
+    height: 5.25rem;
+    background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+    border-radius: 22px;
+    position: absolute;
+    z-index: 0;
+    transition: 0.3s;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+
+    .active {
+      a {
+        color: #141316;
+        stroke: #141316;
+        fill: #141316;
+      }
+    }
+
+    li {
+      width: 4.25rem;
+      height: 4.25rem;
+      margin-bottom: 2.0625rem;
+      list-style: none;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        padding: 1rem 0.75rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #848386;
+        stroke: #848386;
+        fill: #848386;
+
+        span {
+          margin-top: 0.5rem;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .svgContainer {
+      width: 19px;
+      height: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .navbar {
+    display: none;
+  }
+  .svgContainer {
+    width: 19px;
+    height: 30px;
+    margin-top: -0.75rem;
+    margin-bottom: 0.2rem;
+  }
+}

@@ -1,0 +1,111 @@
+.cfGameContainer {
+  width: 100%;
+  display: flex;
+  background: #1f2027;
+  border-radius: 10px;
+  padding: 1.625rem 2.25rem;
+  margin-bottom: 2.25vh;
+
+  &:first-child {
+    margin-bottom: 0;
+  }
+
+  .spacer {
+    width: 3.25vw;
+    height: 100%;
+  }
+
+  .itemContainer {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin-left: 3vw;
+  }
+
+  .balanceContainer {
+    width: 9.375rem;
+    margin-left: 4.75vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .valueContainer {
+      display: flex;
+      align-items: center;
+
+      .balanceIconContainer {
+        width: 18px;
+        height: 20px;
+      }
+
+      .mainValue {
+        margin-left: 0.25rem;
+        font-weight: 500;
+        font-size: 24px;
+        color: #ffffff;
+        text-align: center;
+      }
+    }
+
+    .rangeContainer {
+      display: flex;
+      align-items: center;
+
+      .greyBalanceIconContainer {
+        width: 15px;
+        height: 16px;
+      }
+
+      .subValue {
+        margin-left: 0.25rem;
+        text-align: center;
+        font-weight: 500;
+        font-size: 20px;
+        color: #848386;
+      }
+    }
+  }
+
+  .gameControlsContainer {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    .winnerContainer {
+      width: 66px;
+      height: 66px;
+      margin-right: 0.75rem;
+    }
+
+    .join {
+      font-weight: 500;
+      font-size: 16px;
+      color: #141316;
+      background: linear-gradient(90deg, #8a57de 0%, #deafbd 100%);
+      border-radius: 35px;
+      padding: 0.75rem 2.25rem;
+    }
+
+    .view {
+      font-weight: 500;
+      font-size: 16px;
+      color: #cfcfcf;
+      padding: 0.75rem;
+      background: none;
+    }
+  }
+}
+@media screen and (max-width: 730px) {
+  .cfGameContainer {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    .gameControlsContainer {
+      margin: auto;
+    }
+    .itemContainer {
+      justify-content: center;
+    }
+  }
+}
